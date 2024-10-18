@@ -16,8 +16,8 @@ img{
 if ($posts->num_rows > 0) {
     while ($row = $posts->fetch_assoc()){
         echo '<section class="card">';
-        echo "<h2>" . $row['title'] . "</h2>";
-        echo "<p>" . $row['postHTML'] . "</p>";
+        echo "<h2>" . $row['Title'] . "</h2>";
+        echo "<p>" . $row['Text'] . "</p>";
         $usergrab = "SELECT * FROM users WHERE UserID = " ."$row[UserID]";
         $userresult = $conn->query($usergrab);
         $userresult = $userresult->fetch_assoc();
