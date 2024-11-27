@@ -8,4 +8,4 @@ $conn = new mysqli(hostname:$servername, username: $username,password: $password
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "🟩";
+echo "";

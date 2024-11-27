@@ -1,0 +1,283 @@
+.grid{
+    height:100%;
+    width:100%;
+    display: grid;
+    grid-template-areas:
+    'topbar  topbar'
+    'sidebar content'
+    ;
+    padding: 0px;
+    position: absolute;
+    top:0;
+    grid-template-rows: 5% 95%;
+    grid-template-columns: 20% 80%;
+    left:0;
+}
+.topbar{
+grid-area: topbar;
+display: inline-grid;
+grid-template-areas: "Home Name Account";
+grid-template-columns: 1fr auto auto;
+grid-row: 5%;
+grid-template-rows: 100%;
+background: #D9D9D9;
+text-align: right;
+padding: 4px;
+align-content: center;
+justify-content: flex-end;
+}
+#Name{
+    grid-area: Name;
+    vertical-align: middle;
+    margin:0px;
+    width: auto;
+    justify-self: flex-end;
+    text-align: center;
+    align-self: center;
+    font-size: larger;
+    margin-right: 5%;
+}
+#Home{
+    height: 100%;
+    grid-area: Home;
+    justify-self: flex-start;
+}
+#Account{
+    height: 100%;
+    grid-area: Account;
+}
+.sidebar{
+background:#b3bfc0;
+grid-area: sidebar;
+justify-content: flex-start;
+align-items: center;
+display:flex;
+position: relative;
+flex-direction: column;
+text-align:center;}
+.content{
+grid-area: content;
+background: #50dfff;
+text-align: center;
+display: flex;
+vertical-align: middle;
+align-items: center;
+flex-direction: column;
+
+}
+.sidebar-button{
+    display: flex;
+    width: 91%;
+    background-color: #D9D9D9;
+    height: 70px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.sidebar-button-text{
+    font-family: Sans-Serif;
+    font-size: 25px;
+    position: absolute;
+}
+.sidebar-button > a{
+    height:100%;
+    width:100%;
+    position: relative;
+}
+#Welcome_Block {
+    width: 95%;
+    height: 20%;
+    display: block;
+    justify-self: center;
+    align-self: center;
+    overflow: auto;
+    border-radius: 30px;
+    margin-top: 30px;
+    background-color: #D9D9D9;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+#Welcome_To{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    height: 20%;
+    font-size: 2em;
+    align-self: flex-start;
+    justify-self: center;
+}
+#Nickys_Study{
+    font-size: 7em;
+    height: 80%;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+#HomeCat_Block{
+    height: 70%;
+    width: 95%;
+    background-color: #d9d9d9;
+    justify-self: center;
+    margin-top: 30px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    display: grid;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    overflow: auto;
+    justify-items: center;
+}
+.card{
+    width: 90%;
+    height: 90%;
+    max-height: 150px;
+    overflow: hidden;
+    background: #BFBFBF;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px; 
+    -o-border-radius: 30px;
+    margin: 2%;
+}
+#title{
+    font-family:"Inria Serif";
+    font-size: 32px;
+    justify-self: left;
+    margin: 0px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+#desc{
+    font-size:28px;
+    font-family:Inter;
+    font-style: italic;
+    align-self: center;
+    justify-self: center;
+    margin-top: 15px;
+    margin-left: 30px;}
+#blogsBlock {
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+    overflow-x: visible;
+    justify-items: center;
+    background-color: #D9D9D9;
+    width: 90%;
+    min-height: 90%;
+    align-self: center;
+    justify-self: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+#LoginForm{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    padding: 5%;
+    width:20%;
+    height:20%;
+}
+#confirmation {
+    display: grid;
+    grid-template-areas: "question question"    "yes no";
+    background-color: #D9D9D9;
+    padding: 2%;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    grid-template-rows: 50% 50%;
+    justify-items: center;
+    align-items: center;
+}
+#question {
+    grid-area: question;
+    margin-bottom: 12%;;
+}
+#yes {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    background-color: greenyellow;
+    grid-area: yes;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+#no {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    background-color: red;
+    grid-area: no;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+#no > a, #yes > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#PostsBlock{
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: scroll;
+    overflow-x: visible;
+    justify-items: center;
+    background-color: #D9D9D9;
+    width: 90%;
+    height: 98%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+#Registration{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    padding: 5%;
+    width:20%;
+    height:20%;
+}
+#PostForm{
+    display: grid;
+    grid-template-rows: 5% 5% 10% 40% 10%;
+    width:90%;
+    height: 90%;
+    align-content: center;
+}
