@@ -1,9 +1,9 @@
 <?php if($_SESSION["Logged_In"] == false) {
-    echo "<a style='Color:Red; font-size:200%;'>Please create an account or log in to make posts.</a>";
+    echo "<a style='Color:Red; font-size:200%;'>Please create an account or log in to make blogs.</a>";
     include "LogIn.php";
     exit();
 }?>
-<h1> Which Category are we making this post in? </h1>
+<h1> Which Category are we making this blog in? </h1>
 <?php
 include "connectdb.php";
 $catgrab = "SELECT * FROM Categories";
@@ -15,7 +15,7 @@ if ($cats->num_rows >0){
             }else{
         echo'<section class="card">';
         $CatID = $row['CatID'];
-        echo "<h2 id='title'><strong><a href = 'index.php?file_path=TestScripts\createPostSelectBlog.php&catID=" . urlencode($CatID) . "'>" . $row['CatName'] . "</h2></strong></a>";
+        echo "<h2 id='title'><strong><a href = 'index.php?file_path=scripts\createBlog.php&catID=" . urlencode($CatID) . "'>" . $row['CatName'] . "</h2></strong></a>";
         echo "<p id='desc'>" . $row['CatDesc'] . "</p>";
         echo"</section>";}
     }

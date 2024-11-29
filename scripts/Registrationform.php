@@ -1,4 +1,4 @@
-<form id="Registration" action="index.php?file_path=TestScripts/RegistrationHandle.php" method="post">
+<form id="Registration" action="index.php?file_path=scripts/RegistrationHandle.php" method="post">
 <label for="username-inp"> Please enter a username: </label>
     <input type="text" id = "username-inp" name="username"><br>
     <label for="name-inp">Please enter your name:</label>

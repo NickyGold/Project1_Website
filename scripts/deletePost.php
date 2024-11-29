@@ -28,10 +28,10 @@ if (($blog["CatID"] == 1 && $_SESSION["Role"] == "Owner") || ($post["UserID"] ==
     exit();
 }
 ?>
-<form action = "index.php?file_path=TestScripts/deleteHandle.php" id = "confirmation"  method="post">
+<form action = "index.php?file_path=scripts/deleteHandle.php" id = "confirmation"  method="post">
     <input type="hidden" name ="postID" value = <?php echo $postID;?>>
     <input type="hidden" name ="blogID" value = <?php echo $blogID;?>>
     <div id = "question">Are you sure you want to delete this post?</div>
     <input id = "yes" type="submit" value = "Yes">
-    <div id = "no"><div style="position:absolute;"> No </div> <a href="index.php?file_path=TestScripts/blogpost_view.php&postID=<?php echo$postID?>"></a></div>
+    <div id = "no"><div style="position:absolute;"> No </div> <a href="index.php?file_path=scripts/blogpost_view.php&postID=<?php echo$postID?>"></a></div>
 </form>

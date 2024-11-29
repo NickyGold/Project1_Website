@@ -20,7 +20,7 @@ if($blog->num_rows>0){
 if($blog["CatID"] == 1 && $_SESSION["Role"] != "Owner"){
     echo "<a style='Color:Red; font-size:200%;'>Invalid permissions.</a>";
     exit();}?>
-<form id = "PostForm" action="index.php?file_path=TestScripts/createPostHandle.php" method="post">
+<form id = "PostForm" action="index.php?file_path=scripts/createPostHandle.php" method="post">
     <input type="hidden" name ="blogID" value = <?php echo $BlogID;?>>
     <label for="postTitle-inp"style = "align-content:center;"> Post Title: </label>
     <input type="text" id = "postTitle-inp" name="postTitle"style = "align-content:center;">

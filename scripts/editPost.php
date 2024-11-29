@@ -1,5 +1,5 @@
 <?php
-include "TestScripts\connectDB.php";
+include "scripts\connectDB.php";
 $postID = $_GET["postID"];
 if($postID == NULL){
     echo "<a style='Color:Red; font-size:200%;'>Post ID not Found</a>";
@@ -28,7 +28,7 @@ if (($blog["CatID"] == 1 && $_SESSION["Role"] == "Owner") || ($post["UserID"] ==
     exit();
 }
  ?>
-<form id = "pageLayout" action = "index.php?file_path=TestScripts\editPostHandle.php" method="post">
+<form id = "pageLayout" action = "index.php?file_path=scripts\editPostHandle.php" method="post">
     <input type="hidden" name ="postID" value = <?php echo $postID;?>>
     <textarea id = "postTitle" name="postTitle" style = "text-align:center">
 <?php echo $post["title"];?></textarea>

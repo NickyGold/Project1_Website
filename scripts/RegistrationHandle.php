@@ -5,18 +5,18 @@ $password = $_POST['password'];
 $name = $_POST['name'];
 $sql = "SELECT * FROM users WHERE Username = ?";
 if ($username == NULL){echo "<a style='Color:Red; font-size:200%;'>Please Enter a Username</a>";
-    include "TestScripts/Registrationform.php";
+    include "scripts/Registrationform.php";
     exit();}
 if (strlen($username) < 3 || strlen($name) < 3 || strlen($password) < 3){
     echo "<a style='Color:Red; font-size:200%;'>All fields needs to be at least 3 characters.</a>";
-    include "TestScripts/Registrationform.php";
+    include "scripts/Registrationform.php";
     exit();
 }
 if ($name == NULL){echo "<a style='Color:Red; font-size:200%;'>Please Enter a Name</a>";
-    include "TestScripts/Registrationform.php";
+    include "scripts/Registrationform.php";
     exit();}
 if ($password == NULL){echo "<a style='Color:Red; font-size:200%;'>Please Enter a Password</a>";
-    include "TestScripts/Registrationform.php";
+    include "scripts/Registrationform.php";
     exit();}
 $arg = $conn->prepare($sql);
 $arg->bind_param("s",$username);
@@ -24,7 +24,7 @@ $arg->execute();
 $arg = $arg->get_result();
 if ($arg->num_rows>0){
     echo "<a style='Color:Red; font-size:200%;'>Username already exists</a>";
-    include "TestScripts/Registrationform.php";
+    include "scripts/Registrationform.php";
     exit();
 } else{
     $password = password_hash($password, PASSWORD_DEFAULT);
@@ -40,6 +40,6 @@ if ($arg->num_rows>0){
     $_SESSION["Logged_In"] = true;
     $_SESSION["Name"] = $user["Name"];
     $_SESSION["UserID"] = $user["UserID"];
-    header("Location: index.php?file_path=TestScripts/home.php");
+    header("Location: index.php?file_path=scripts/home.php");
     die();
 }

@@ -25,10 +25,10 @@ $user = $userGrab->fetch_assoc();
             <?php echo $post["postHTML"]; ?>
         </div>
         <?php if ($_SESSION["UserID"] == $post["UserID"] || $_SESSION["Role"] == "Owner" || $_SESSION["Role"] == "Admin"){echo'
-        <a href="index.php?file_path=TestScripts/deletePost.php&postID=' . urlencode($postID) . '"id="deleteButton">
+        <a href="index.php?file_path=scripts/deletePost.php&postID=' . urlencode($postID) . '"id="deleteButton">
             Delete
         </a>
-        <a href="index.php?file_path=TestScripts/editPost.php&postID=' . urlencode($postID) . '"id="editButton">
+        <a href="index.php?file_path=scripts/editPost.php&postID=' . urlencode($postID) . '"id="editButton">
             Edit
         </a>';}?>
         <div id = "madeBy">
