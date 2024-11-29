@@ -2,7 +2,6 @@
 include "connectDB.php";
 $CatID = $_GET["catID"];
 $blogGrab = "SELECT * FROM blogs WHERE CatID = " . $CatID;
-echo $blogGrab;
 $blogs = $conn->query($blogGrab);
 echo "<section id='blogsBlock'>";
 if ($blogs->num_rows>0){

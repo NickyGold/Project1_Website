@@ -77,7 +77,7 @@ flex-direction: column;
     -o-border-radius: 50px;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .sidebar-button-text{
     font-family: Sans-Serif;
@@ -130,6 +130,7 @@ flex-direction: column;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
     display: grid;
+    grid-auto-rows: 33.33%;
     flex-direction: column;
     box-sizing: border-box;
     align-items: center;
@@ -138,42 +139,47 @@ flex-direction: column;
 }
 .card{
     width: 90%;
-    height: 90%;
-    max-height: 150px;
-    overflow: hidden;
+    height: 80%;
+    align-self: center;
+    overflow: auto;
     background: #BFBFBF;
     border-radius: 30px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 40% 60%;
+    grid-template-columns: 100%;
+    align-content: center;
     align-items: center;
+    justify-items: center;
+    justify-content: center;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
-    -ms-border-radius: 30px; 
+    -ms-border-radius: 30px;
     -o-border-radius: 30px;
-    margin: 2%;
 }
 #title{
-    font-family:"Inria Serif";
+    font-family:Inter;
     font-size: 32px;
-    justify-self: left;
+    align-self: center;
+    align-content: center;
+    justify-self: center;
     margin: 0px;
-    margin-top: 5px;
-    margin-left: 10px;
 }
 #desc{
     font-size:28px;
     font-family:Inter;
-    font-style: italic;
     align-self: center;
     justify-self: center;
-    margin-top: 15px;
-    margin-left: 30px;}
+    margin: 0px;}
 #blogsBlock {
-    margin-left: auto;
-    margin-right: auto;
+    height: 100%;
+    margin: auto;
     overflow-y: auto;
     overflow-x: visible;
+    display: grid;
+    grid-auto-rows: 25%;
+    align-self: center;
     justify-items: center;
+    align-items: center;
     background-color: #D9D9D9;
     width: 90%;
     min-height: 90%;
@@ -215,8 +221,9 @@ flex-direction: column;
     margin-bottom: 12%;;
 }
 #yes {
+    border: 0cm;
     display: flex;
-    width: 80%;
+    width: 70%;
     height: 100%;
     background-color: greenyellow;
     grid-area: yes;
@@ -227,6 +234,10 @@ flex-direction: column;
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
+}
+#yes:hover{
+    cursor:pointer;
+    rotate: 180;
 }
 #no {
     display: flex;
@@ -242,6 +253,14 @@ flex-direction: column;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
 }
+#homeIcon{
+    filter: brightness(0.5);
+    -webkit-filter: brightness(0.5);
+}
+#homeIcon:hover{
+    filter: brightness(1);
+    -webkit-filter: brightness(1);
+}
 #no > a, #yes > a {
     display: block;
     width: 100%;
@@ -249,14 +268,15 @@ flex-direction: column;
     position: relative;
 }
 #PostsBlock{
-    margin-left: auto;
-    margin-right: auto;
-    overflow-y: scroll;
+    height: 100%;
+    margin: auto;
+    overflow-y: auto;
     overflow-x: visible;
     justify-items: center;
     background-color: #D9D9D9;
     width: 90%;
-    height: 98%;
+    display: grid;
+    grid-auto-rows: 20%;
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius: 25px;
@@ -280,4 +300,129 @@ flex-direction: column;
     width:90%;
     height: 90%;
     align-content: center;
+}
+#pageLayout {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 15% 85%;
+}
+#postTitle{
+    justify-self: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #D9D9D9;
+    height: 80%;
+    width:95%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    font-size: 64px;
+    overflow-y: auto;
+}
+#postGrid{
+    width:95%;
+    height: 98%;
+    background-color: #B3BFC0;
+    display: grid;
+    grid-template-areas: 'postContent postContent postContent'
+    'deleteButton editButton madeBy';
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 30% 30% 40%;
+}
+#greyBackground{
+    width: 95%;
+    height: 97%;
+    align-items: flex-end;
+    justify-items: center;
+    background-color: #B3BFC0;
+    display: grid;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+#postContent{
+    min-width: 95.6%;
+    justify-self: center;
+    grid-area: postContent;
+    background-color: #D9D9D9;
+    font-size: 20px;
+    padding: 2%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+#deleteButton{
+    grid-area: deleteButton;
+    align-content: center;
+    background-color: #CD3F3F;
+    color: #fff;
+    font-size: x-large;
+    font-family: Sans-Serif;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    text-decoration: none;
+}
+#editButton{
+    text-decoration: none;
+    grid-area: editButton;
+    align-content: center;
+    background-color: #d9d9d9;
+    color: #000;
+    font-size: x-large;
+    font-family: Sans-Serif;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-left: 2%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+#confirmEditButton{
+    text-decoration: none;
+    grid-area: editButton;
+    align-content: center;
+    background-color: #d9d9d9;
+    color: #000;
+    font-size: x-large;
+    font-family: Sans-Serif;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-left: 2%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+#madeBy{
+    grid-area: madeBy;
+    align-content: center;
+    background-color: #d9d9d9;
+    font-size: x-large;
+    font-family: Sans-Serif;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-left: 2%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
